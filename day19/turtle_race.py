@@ -1,4 +1,4 @@
-from turtle import Turtle, Screen
+from turtle import Turtle, Screen, TK
 from random import randint
 screen = Screen()
 screen.setup(width=500, height=400)
@@ -25,9 +25,9 @@ while is_raceON:
           is_raceON = False
           winner = t.pencolor()
           if winner == user_input:
-             print (f"You won!, The color {winner} won the race.")
+             TK.messagebox.showinfo(title="Game status", message="You've Won!!")
           else:
-                print(f"You've lost, The color {winner} won the race.")
+                TK.messagebox.showinfo(title="Game status", message="You've Lost!!")
 
         rand_dist = randint(0,10)
         t.forward(rand_dist)
